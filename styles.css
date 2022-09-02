@@ -1,0 +1,155 @@
+/* Using Outfit font from google */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@300;400;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* List colors being used in this project */
+:root{
+    /* Primary colors */
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+    
+    --MainVerydarkblue: hsl(217, 54%, 11%); /* mainBG */
+    --CardVerydarkblue: hsl(216, 50%, 16%); /*cardBG*/
+    --LineVerydarkblue: hsl(215, 32%, 27%); /* line*/
+    --White: hsl(0, 0%, 100%);
+}
+
+/* Make items align in column and give font size & type */
+body{
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background-color: var(--MainVerydarkblue);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;    
+}
+
+/* Make card component center on the page and make shadows */
+main{
+    max-width: 320px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 4rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--CardVerydarkblue);
+
+    box-shadow: 0px 25px 0px 20px rgba(0,0,0,0.04), 0px 20px 0px 20px rgba(0,0,0,0.1), 0px 25px 0px 50px rgba(0,0,0,0.07);
+}
+
+/* Hand how Equilibrium image looks */
+.image{
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+/* Make header bold and color white */
+h1{
+    color: var(--White);
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+/* handle properties of the description */
+p{
+    color: var(--Softblue);
+
+    margin-bottom: 1.2rem;
+}
+
+/* set font property of ETH amount and days left */
+.list{
+    margin-bottom: 1.2rem;
+    font-size: 17px;
+}
+
+/* make the sizes of ETH amount image and days image fit well */
+img{
+    margin-right: 5px;
+    object-fit: scale-down;
+}
+
+/* make ETH move to left change the color */
+.eth{
+    float: left;
+    color: var(--Cyan);
+
+    display: flex;
+    flex-direction: row;
+}
+/* make Days left move to right change the color */
+.days{
+    color: var(--Softblue);
+    float: right;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* make line */
+hr{
+    border: 0;
+    height: 2px;
+    background: var(--LineVerydarkblue);
+    margin-bottom: 1rem;
+}
+
+/* make the items in author align horizontally */
+.author{
+    color: var(--Softblue);
+    display: flex;
+    font-size: 15px;
+
+    align-items: center;
+    justify-content: left;
+}
+
+/* make Jules Wyvern color white*/
+span{
+    color: var(--White);
+    margin-left: 5px;
+}
+
+/* create border for image and make it fit in the card */
+.author-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid hsla(0, 0%, 90%, 0.5);
+    margin-right: 1rem;
+}
+
+/* Handle footer properties */
+.attribution { 
+    font-size: 10px; 
+    text-align: center; 
+    color: var(--Softblue);
+    margin: 2rem;
+}
+
+/* Make text with link color white in footer */
+.attribution a { 
+    color: var(--White);
+    text-decoration: none;
+}
+
+/* Change link color when mouse hover on it */
+.attribution a:hover{
+    color: var(--Cyan);
+}
