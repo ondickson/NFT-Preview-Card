@@ -32,6 +32,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 
     margin: auto;    
 }
@@ -40,6 +41,7 @@ body{
 main{
     max-width: 320px;
     width: 100%;
+    
 
     display: flex;
     flex-direction: column;
@@ -49,20 +51,50 @@ main{
     border-radius: 1rem;
     background-color: var(--CardVerydarkblue);
 
-    box-shadow: 0px 25px 0px 20px rgba(0,0,0,0.04), 0px 20px 0px 20px rgba(0,0,0,0.1), 0px 25px 0px 50px rgba(0,0,0,0.07);
+    box-shadow: 0px 25px 0px 20px rgba(0,0,0,0.02), 0px 20px 0px 20px rgba(0,0,0,0.06), 0px 25px 0px 50px rgba(0,0,0,0.07);
 }
 
-/* Hand how Equilibrium image looks */
+/* Handle how Equilibrium image looks */
 .image{
+    position: relative;
     margin-bottom: 1rem;
     border-radius: 1rem;
+}
+.equilibrium-image{
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+}
+.eye-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0%, 100%, 97%, 0.3);
+    border-radius: 1rem;
+    opacity: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* make eye and color appear when cursor is on image*/
+.eye-overlay:hover{
+    opacity: 1;
 }
 
 /* Make header bold and color white */
 h1{
-    color: var(--White);
     margin-bottom: 1rem;
     font-size: 20px;
+}
+
+/* make header a link*/
+h1 a{
+    color: var(--White);
+    text-decoration: none;  
 }
 
 /* handle properties of the description */
@@ -92,6 +124,7 @@ img{
     display: flex;
     flex-direction: row;
 }
+
 /* make Days left move to right change the color */
 .days{
     color: var(--Softblue);
@@ -120,11 +153,14 @@ hr{
     justify-content: left;
 }
 
-/* make Jules Wyvern color white*/
-span{
+/* make Jules Wyvern color white and a link*/
+.author-link{
     color: var(--White);
     margin-left: 5px;
+    text-decoration: none;
 }
+
+
 
 /* create border for image and make it fit in the card */
 .author-img{
@@ -149,7 +185,7 @@ span{
     text-decoration: none;
 }
 
-/* Change link color when mouse hover on it */
-.attribution a:hover{
+/* Change link color when mouse hover on author name, header, and footer with link */
+.author-link:hover, .attribution h1, a:hover{
     color: var(--Cyan);
 }
