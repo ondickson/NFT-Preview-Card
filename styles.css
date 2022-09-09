@@ -51,7 +51,7 @@ main{
     border-radius: 1rem;
     background-color: var(--CardVerydarkblue);
 
-    box-shadow: 0px 25px 0px 20px rgba(0,0,0,0.02), 0px 20px 0px 20px rgba(0,0,0,0.06), 0px 25px 0px 50px rgba(0,0,0,0.07);
+    box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 3%);
 }
 
 /* Handle how Equilibrium image looks */
@@ -78,7 +78,6 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 /* make eye and color appear when cursor is on image*/
@@ -153,6 +152,7 @@ hr{
 
     align-items: center;
     justify-content: left;
+    flex-direction: row;
 }
 
 /* make Jules Wyvern color white and a link*/
@@ -190,4 +190,5 @@ hr{
 /* Change link color when mouse hover on author name, header, and footer with link */
 .author-link:hover, .attribution h1, a:hover{
     color: var(--Cyan);
+    transition: all ease-in 0.2s;
 }
