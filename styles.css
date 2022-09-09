@@ -78,11 +78,13 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 /* make eye and color appear when cursor is on image*/
 .eye-overlay:hover{
     opacity: 1;
+    transition: all ease-in 0.5s;
 }
 
 /* Make header bold and color white */
